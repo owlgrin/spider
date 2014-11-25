@@ -26,13 +26,13 @@
 
 		<!-- Add your site or application content here -->
 		<section id="content">
-			<div class="container">
+
 	<div class="row">
 		<div class="col-xs-12">
 			@yield('content')
 		</div>
 	</div>
-			</div>
+
 		</section>
 </body>
 </html>
