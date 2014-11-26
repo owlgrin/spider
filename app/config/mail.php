@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'sahilsarpal5@gmail.com', 'name' => 'Sahil Sarpal'),
+	'from' => array('address' => '', 'name' => ''),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'sahilsarpal5@gmail.com',
+	'username' => '',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'sahilthe123',
+	'password' => '',
 
 	/*
 	|--------------------------------------------------------------------------
