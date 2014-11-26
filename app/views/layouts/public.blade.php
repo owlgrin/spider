@@ -26,13 +26,7 @@
 
 		<!-- Add your site or application content here -->
 		<section id="content">
-
-	<div class="row">
-		<div class="col-xs-12">
 			@yield('content')
-		</div>
-	</div>
-
 		</section>
 </body>
 </html>

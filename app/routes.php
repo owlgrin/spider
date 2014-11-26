@@ -11,15 +11,11 @@
 |
 */
 
-// Route::get('/password', function()
+// Route::get('/', function()
 // {
-// 	return Hash::make('sarpal');
+// 	return Hash::make('123456');
 // });
 
-// Route::get('/', 'HomeController@showWelcome');
-// Route::get('/', 'HomeController@showWelcome')->before('auth.basic');
-// Route::post('/', ['as' => 'store.credentials', 'uses' => 'HomeController@storeCredentials'])->before('auth.basic');
-// Route::get('/clients', 'HomeController@getCredentials')->before('auth.basic');
-Route::get('/', 'HomeController@showWelcome');
-Route::post('/', ['as' => 'store.credentials', 'uses' => 'HomeController@storeGuests']);
-Route::get('/guests', 'HomeController@getGuests');
+Route::get('/', 'HomeController@showWelcome')->before('auth.basic');
+Route::post('/', ['as' => 'store.credentials', 'uses' => 'HomeController@storeGuests'])->before('auth.basic');
+Route::get('/guests', 'HomeController@getGuests')->before('auth.basic');

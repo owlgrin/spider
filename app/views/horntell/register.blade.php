@@ -48,7 +48,7 @@ Horntell
 								</div>
 								<div class="form-group">
 									{{ Form::label('message', 'Message', ['class' => 'control-label h4 m-b']) }}
-									{{ Form::text('message', 'Hola Sarpal Ji!', ['class' => 'form-control']) }}
+									{{ Form::textarea('message', 'Connect me to horntell !', ['class' => 'form-control']) }}
 									{{$errors->first('message', '<span class="text-danger">:message</span>')}}
 									<span id="default_text" class="help-block">
 										 {{ Form::checkbox('defaule_text', 'Default', true) }}
@@ -79,7 +79,7 @@ window.onload = function () {
 
     function check() {
         if (input.checked) {
-            var a = "Hello Sarpal Ji";
+            var a = "Connect me to horntell !";
         } else {
             var a = "";
         }

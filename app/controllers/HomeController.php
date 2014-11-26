@@ -1,12 +1,17 @@
 <?php
 
+use App\Mailers\Mailer;
 use App\Guest\GuestRepo;
 
 class HomeController extends BaseController {
 
-	public function __construct(GuestRepo $guestRepo)
+	protected $guestRepo;
+	protected $mailer;
+
+	public function __construct(GuestRepo $guestRepo, Mailer $mailer)
 	{
 		$this->guestRepo = $guestRepo;
+		$this->mailer = $mailer;
 	}	
 
 
@@ -24,6 +29,11 @@ class HomeController extends BaseController {
 
 		$this->guestRepo->store(Input::all());
 
+		if(! is_null(Input::get('mail')))
+		{
+			$this->mailer->sendTo(Input::all(), 'welcome to horntell', 'emails.guest', [ 'body' => Input::get('message')]);
+		}
+		
 		return Redirect::to(Config::get('app.url'). '/');
 	}
 
