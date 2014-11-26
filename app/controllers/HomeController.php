@@ -30,7 +30,7 @@ class HomeController extends BaseController {
 
 		if(! is_null(Input::get('mail')))
 		{
-			$this->mailer->sendTo(Input::all(), 'welcome to horntell', 'emails.guest', [ 'body' => Input::get('message')]);
+			$this->mailer->sendTo(Input::all(), Config::get('spider.subject'), 'emails.guest', [ 'body' => str_replace('{name}', Input::get('name'), Input::get('message'))]);
 		}
 		
 		return Redirect::to(Config::get('app.url'). '/');

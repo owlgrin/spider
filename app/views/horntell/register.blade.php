@@ -33,34 +33,30 @@ Horntell
 								</div>
 								<div class="form-group">
 									{{ Form::label('type', 'Type', ['class' => 'control-label h4 m-b']) }}
-									<span id="mail" class="help-block">
+									<p>
 										{{ Form::radio('type', 'investor', true) }}
 										Potential Investor
-									</span>
-									<span id="mail" class="help-block">
+									</p>
+									<p>
 										{{ Form::radio('type', 'customer') }}
 										Potential Customer
-									</span>
-									<span id="mail" class="help-block">
+									</p>
+									<p>
 										{{ Form::radio('type', 'viewer') }}
-										Potential Viewer
-									</span>
+										Just A Viewer
+									</p>
 								</div>
 								<div class="form-group">
 									{{ Form::label('message', 'Message', ['class' => 'control-label h4 m-b']) }}
-									{{ Form::textarea('message', 'Connect me to horntell !', ['class' => 'form-control']) }}
+									{{ Form::textarea('message', Config::get('spider.message'), ['class' => 'form-control']) }}
 									{{$errors->first('message', '<span class="text-danger">:message</span>')}}
-									<span id="default_text" class="help-block">
-										 {{ Form::checkbox('defaule_text', 'Default', true) }}
-										 Default Text
-									</span>
 									<span id="mail" class="help-block">
 										{{ Form::checkbox('mail', 'Mail', true) }}
-										 Mail Me
+										 Send email?
 									</span>
 								</div>
 								<div class="form-group">
-									{{ Form::submit('Register Me', ['class' => 'btn btn-primary btn-block']) }}
+									{{ Form::submit('Spin the web!', ['class' => 'btn btn-primary btn-block']) }}
 								</div>
 							</div>									
 						</div>
@@ -71,21 +67,3 @@ Horntell
 	</div>		
 </div>
 @stop
-
-<!-- Scripts -->
-<script>
-window.onload = function () {
-    var input = document.querySelector('input[name=\'defaule_text\'][type=checkbox]');
-
-    function check() {
-        if (input.checked) {
-            var a = "Connect me to horntell !";
-        } else {
-            var a = "";
-        }
-        document.getElementById('message').value = '' + a;
-    }
-    input.onchange = check;
-}
-
-</script>
