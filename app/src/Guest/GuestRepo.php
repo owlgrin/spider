@@ -2,6 +2,6 @@
 
 interface GuestRepo {
 	
-	public function store($user);
-	
+	public function store($guest);
+	public function get();
 }

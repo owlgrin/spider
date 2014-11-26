@@ -20,6 +20,7 @@ class CreateCredentialsTable extends Migration {
 			$table->string('phone');
 			$table->text('message');
 			$table->text('type');
+			$table->string('user_id');
 			$table->timestamps();
 		});
 	}

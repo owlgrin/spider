@@ -26,7 +26,6 @@ class HomeController extends BaseController {
 		{
 			return Redirect::back()->withInput()->withErrors(User::$errors);
 		}
-
 		$this->guestRepo->store(Input::all());
 
 		if(! is_null(Input::get('mail')))

@@ -14,16 +14,17 @@ class DbGuestRepo implements GuestRepo {
 		$this->db = $db;
 	}
 
-	public function store($user)
+	public function store($guest)
 	{
 		try
 		{
-			$userId = $this->db->table('guests')->insertGetId([
-				'name' => array_get($user, 'name'),
-				'email' => array_get($user, 'email'),
-				'phone' => array_get($user, 'phone'),
-				'type' => array_get($user, 'type'),
-				'message' => array_get($user, 'message'),
+			$this->db->table('guests')->insert([
+				'name' => array_get($guest, 'name'),
+				'email' => array_get($guest, 'email'),
+				'phone' => array_get($guest, 'phone'),
+				'type' => array_get($guest, 'type'),
+				'message' => array_get($guest, 'message'),
+				'user_id' => \Auth::user()->id,
 				'created_at' => $this->db->raw('now()'),
 				'updated_at' => $this->db->raw('now()')
 			]);
