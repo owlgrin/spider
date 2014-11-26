@@ -24,7 +24,7 @@ class DbGuestRepo implements GuestRepo {
 				'phone' => array_get($guest, 'phone'),
 				'type' => array_get($guest, 'type'),
 				'message' => array_get($guest, 'message'),
-				'user_id' => \Auth::user()->id,
+				'user_id' => \Auth::id(),
 				'created_at' => $this->db->raw('now()'),
 				'updated_at' => $this->db->raw('now()')
 			]);
