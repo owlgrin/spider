@@ -1,6 +1,14 @@
 <?php
 
 return array(
-	'subject' => 'Hello',
-	'message' => "It was great to meet you.\nThanks."
+	'subject' => 'Hello from Mohit - the Horntell guy!',
+	'message' => 
+"Hey {name},<br/><br/>
+
+It was so great to meet you at Unpluggd 2014. Remember me?<br/><br/>
+
+Thought of saying a simple hello today. Hello!<br/><br/>
+
+Mohit
+"
 );
