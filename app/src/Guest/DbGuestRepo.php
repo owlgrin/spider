@@ -32,7 +32,7 @@ class DbGuestRepo implements GuestRepo {
 
 			if(array_get($guest, 'mail_me') === 'now')
 			{
-				$guest['mailed_at'] = date('Y-m-d H:i:s');
+				$guest['mailed_at'] = $this->db->raw('now()');
 			}
 
 			$this->db->table('guests')->insert($guest);

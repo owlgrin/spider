@@ -8,7 +8,7 @@ class Mailer {
 	{
 		Mail::send($view, $data, function($message) use($user, $subject)
 		{
-			$message->to($user->email)
+			$message->to($user['email'])
 			->subject($subject);
 		});
 	}

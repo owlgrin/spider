@@ -13,7 +13,7 @@ class SendMailCommand extends Command {
 	 *
 	 * @var string
 	 */
-	protected $name = 'send:mail';
+	protected $name = 'user:mail';
 
 	/**
 	 * The console command description.
@@ -54,10 +54,10 @@ class SendMailCommand extends Command {
 
 			foreach($guests as $key => $guest) 
 			{
-				$this->mailer->sendTo($guest, Config::get('spider.subject'), 'emails.guest', [ 'body' => str_replace('{name}', $guest->name, $guest->message)]);
+				$this->mailer->sendTo($guest, Config::get('spider.subject'), 'emails.guest', [ 'body' => str_replace('{name}', $guest['name'], $guest['message'])]);
 				
-				$this->info('Mail sent to ' . $guest->name . '.');
-				array_push($guestIds, $guest->id);
+				$this->info('Mail sent to ' . $guest['name'] . '.');
+				array_push($guestIds, $guest['id']);
 			}
 
 			DB::table('guests')
