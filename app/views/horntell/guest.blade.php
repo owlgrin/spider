@@ -22,12 +22,12 @@ Horntell
             <tbody>
             	@foreach ($guests as $guest)
                     <tr>
-                      <td>{{ $guest->id }}</td>
-                      <td>{{ $guest->name }}</td>
-                      <td>{{ $guest->email }}</td>
-                      <td>{{ $guest->phone }}</td>
-                      <td>{{ $guest->message }}</td>
-                      <td>{{ $guest->type }}</td>
+                      <td>{{ $guest['id'] }}</td>
+                      <td>{{ $guest['name'] }}</td>
+                      <td>{{ $guest['email'] }}</td>
+                      <td>{{ $guest['phone'] }}</td>
+                      <td>{{ $guest['message'] }}</td>
+                      <td>{{ $guest['type'] }}</td>
                     </tr>
     			@endforeach
             </tbody>
