@@ -12,3 +12,4 @@
 */
 
 Artisan::add(App::make('CreateNewUserCommand'));
+Artisan::add(App::make('SendMailCommand'));

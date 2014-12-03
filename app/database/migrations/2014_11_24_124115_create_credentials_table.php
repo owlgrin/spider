@@ -21,6 +21,8 @@ class CreateCredentialsTable extends Migration {
 			$table->string('phone');
 			$table->text('message');
 			$table->text('type');
+			$table->enum('mail_me', ['now', 'later']);
+			$table->dateTime('mailed_at')->nullable();
 			$table->timestamps();
 		});
 	}

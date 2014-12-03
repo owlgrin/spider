@@ -28,7 +28,7 @@ class HomeController extends BaseController {
 		}
 		$this->guestRepo->store(Input::all());
 
-		if(! is_null(Input::get('mail')))
+		if(! is_null(Input::get('mail')) && Input::get('mail_me') === 'now')
 		{
 			$this->mailer->sendTo(Input::all(), Config::get('spider.subject'), 'emails.guest', [ 'body' => str_replace('{name}', Input::get('name'), Input::get('message'))]);
 		}

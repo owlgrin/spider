@@ -50,10 +50,18 @@ Horntell
 									{{ Form::label('message', 'Message', ['class' => 'control-label h4 m-b']) }}
 									{{ Form::textarea('message', Config::get('spider.message'), ['class' => 'form-control']) }}
 									{{$errors->first('message', '<span class="text-danger">:message</span>')}}
-									<span id="mail" class="help-block">
-										{{ Form::checkbox('mail', 'Mail', true) }}
-										 Send email?
-									</span>
+									<p class="help-block">
+										<span id="mail" >
+											{{ Form::checkbox('mail', 'Mail', true) }}
+											Send email?
+										</span>
+										<span>
+											{{ Form::radio('mail_me', 'now', true) }}
+											Now
+											{{ Form::radio('mail_me', 'later') }}
+											Later
+										</span>
+									</p>
 								</div>
 								<div class="form-group">
 									{{ Form::submit('Spin the web!', ['class' => 'btn btn-primary btn-block']) }}
