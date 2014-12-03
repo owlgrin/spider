@@ -9,6 +9,8 @@ It was so great to meet you at Unpluggd 2014. Remember me?<br/><br/>
 
 Thought of saying a simple hello today. Hello!<br/><br/>
 
-Mohit
+Mohit<br/>
+Founder & CEO</br>
+Horntell
 "
 );
