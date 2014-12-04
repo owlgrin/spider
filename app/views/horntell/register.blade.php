@@ -7,7 +7,7 @@ Horntell
 @section('content')
 <div class="container">
 	<div class="row">
-		<img src="{{ URL::asset('images/logo.text.color.small.png'); }}" class="img-responsive img-center">
+		<img src="{{ URL::asset('images/horntell.horizontal.medium.png'); }}" class="img-responsive img-center">
 	</div>
 	<div class="row">
 		<div class="col-md-6 col-xs-10 col-md-offset-3 col-xs-offset-1">
